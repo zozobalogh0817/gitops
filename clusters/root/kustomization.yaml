@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
   - https://raw.githubusercontent.com/longhorn/longhorn/v1.11.0/deploy/longhorn.yaml
-  - longhorn-namespace.yaml
 
 commonAnnotations:
   argocd.argoproj.io/sync-wave: "1"
