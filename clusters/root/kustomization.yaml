@@ -6,4 +6,5 @@ resources:
   - external-secrets.yaml
   - metallb.yaml
   - gateway-api.yaml
+  - longhorn-init.yaml
   - longhorn.yaml
