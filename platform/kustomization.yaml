@@ -4,7 +4,3 @@ kind: Kustomization
 resources:
   - cert-manager.yaml
   - external-secrets.yaml
-  - metallb.yaml
-  - gateway-api.yaml
-  - longhorn-init.yaml
-  - longhorn.yaml

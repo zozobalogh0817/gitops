@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: apps
+  namespace: argocd
+spec:
+  description: "Layer 3: Business workloads"
+  sourceRepos:
+    - https://github.com/Clustral/gitops.git
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
