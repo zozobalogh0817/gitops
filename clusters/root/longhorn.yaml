@@ -7,10 +7,13 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
 spec:
   project: default
-  source:
-    repoURL: https://charts.longhorn.io
-    chart: longhorn
-    targetRevision: 1.11.0
+  sources:
+    - repoURL: https://charts.longhorn.io
+      chart: longhorn
+      targetRevision: 1.11.0
+    - repoURL: https://github.com/Clustral/gitops.git
+      path: clusters/longhorn-presync
+      targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: longhorn-system
