@@ -6,7 +6,7 @@ metadata:
 spec:
   description: "Layer 3: Business workloads"
   sourceRepos:
-    - server: "*"
+    - "*"
   destinations:
     - server: "*"
       namespace: "*"
