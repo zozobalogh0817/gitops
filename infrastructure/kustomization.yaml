@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - gateway/
+  - longhorn-config.yaml
   - longhorn.yaml
   - metallb.yaml
   - metallb-config/

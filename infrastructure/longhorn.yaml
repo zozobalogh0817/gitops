@@ -3,15 +3,14 @@ kind: Application
 metadata:
   name: longhorn
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   project: infrastructure
-  sources:
-    - repoURL: https://charts.longhorn.io
-      chart: longhorn
-      targetRevision: 1.11.0
-    - repoURL: https://github.com/Clustral/gitops.git
-      path: infrastructure/longhorn
-      targetRevision: HEAD
+  source:
+    repoURL: https://charts.longhorn.io
+    chart: longhorn
+    targetRevision: 1.11.0
   destination:
     server: https://kubernetes.default.svc
     namespace: longhorn-system

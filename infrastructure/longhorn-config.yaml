@@ -1,24 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: metallb
+  name: longhorn-config
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   project: infrastructure
   source:
-    repoURL: https://metallb.github.io/metallb
-    chart: metallb
-    targetRevision: 0.15.3
-    helm:
-      values: |
-        speaker:
-          memberlist:
-            enabled: true
+    repoURL: https://github.com/Clustral/gitops.git
+    path: infrastructure/longhorn
+    targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: metallb-system
+    namespace: longhorn-system
   syncPolicy:
     automated:
       prune: true
