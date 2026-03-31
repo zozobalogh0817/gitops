@@ -17,13 +17,13 @@ spec:
           image:
             registry: ghcr.io
             repository: rabbitmq/cluster-operator
-            tag: "v2.9.0"
+            tag: "2.20.0"
         msgTopologyOperator:
           enabled: true
           image:
             registry: ghcr.io
             repository: rabbitmq/messaging-topology-operator
-            tag: "v1.13.0"
+            tag: "1.19.0"
         useCertManager: true
   destination:
     server: https://kubernetes.default.svc
