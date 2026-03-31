@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
   - cert-manager.yaml
   - external-secrets.yaml
+  - rabbitmq-operator.yaml
+  - external-secrets-config/
+  - cert-manager-config/
