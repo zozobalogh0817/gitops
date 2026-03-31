@@ -11,5 +11,5 @@ spec:
     - minio.kube.it.com
   rules:
     - backendRefs:
-        - name: minio
+        - name: minio-console
           port: 9001
