@@ -15,14 +15,14 @@ spec:
       values: |
         clusterOperator:
           image:
-            registry: docker.io
-            repository: rabbitmqoperator/cluster-operator
+            registry: ghcr.io
+            repository: rabbitmq/cluster-operator
             tag: "v2.9.0"
         msgTopologyOperator:
           enabled: true
           image:
-            registry: docker.io
-            repository: rabbitmqoperator/messaging-topology-operator-with-certmanager
+            registry: ghcr.io
+            repository: rabbitmq/messaging-topology-operator
             tag: "v1.13.0"
         useCertManager: true
   destination:

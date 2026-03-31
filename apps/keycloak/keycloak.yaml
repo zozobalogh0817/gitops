@@ -18,6 +18,8 @@ spec:
       key: password
   http:
     httpEnabled: true
+  ingress:
+    enabled: false
   hostname:
     hostname: keycloak.kube.it.com
     strict: false
