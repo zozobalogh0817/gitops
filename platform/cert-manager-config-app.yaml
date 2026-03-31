@@ -1,23 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rabbitmq-operator
+  name: cert-manager-config
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   project: platform
   source:
-    repoURL: https://github.com/rabbitmq/cluster-operator
-    targetRevision: v2.9.0
-    path: config/default
+    repoURL: https://github.com/Clustral/gitops.git
+    path: platform/cert-manager-config
+    targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: rabbitmq-system
+    namespace: cert-manager
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - ServerSideApply=true

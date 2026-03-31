@@ -5,5 +5,5 @@ resources:
   - cert-manager.yaml
   - external-secrets.yaml
   - rabbitmq-operator.yaml
-  - external-secrets-config/
-  - cert-manager-config/
+  - external-secrets-config-app.yaml
+  - cert-manager-config-app.yaml
