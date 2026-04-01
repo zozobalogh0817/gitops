@@ -33,7 +33,8 @@ spec:
                 longhorn.kube.it.com,
                 rabbit.kube.it.com,
                 minio.kube.it.com,
-                keycloak.kube.it.com
+                keycloak.kube.it.com,
+                vpn.kube.it.com
             - name: PROXIED
               value: "true"
             - name: UPDATE_CRON
