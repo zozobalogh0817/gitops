@@ -12,6 +12,9 @@ spec:
     helm:
       values: |
         clusterName: teleport.kube.it.com
+        publicAddr:
+          - teleport.kube.it.com:443
+
         acme: false
 
         tls:
