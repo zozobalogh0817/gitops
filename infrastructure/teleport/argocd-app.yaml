@@ -13,21 +13,30 @@ spec:
       values: |
         clusterName: teleport.kube.it.com
         acme: false
+
         tls:
           existingSecretName: teleport-tls
+
         service:
           type: ClusterIP
+
         persistence:
           enabled: true
           storageClassName: longhorn
           size: 10Gi
+
         proxyListenerMode: multiplex
+
+        authentication:
+          type: local
+          secondFactors:
+            - otp
+            - webauthn
+
         auth:
           teleportConfig:
             auth_service:
               authentication:
-                type: local
-                second_factor: "on"
                 webauthn:
                   rp_id: teleport.kube.it.com
   destination:
