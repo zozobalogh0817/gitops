@@ -11,5 +11,5 @@ spec:
     - teleport.kube.it.com
   rules:
     - backendRefs:
-        - name: teleport-cluster
+        - name: teleport
           port: 3080
