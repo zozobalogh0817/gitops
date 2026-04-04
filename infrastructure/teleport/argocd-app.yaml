@@ -12,8 +12,6 @@ spec:
     helm:
       values: |
         clusterName: teleport.kube.it.com
-        publicAddr:
-          - teleport.kube.it.com:443
 
         acme: false
 
@@ -28,7 +26,19 @@ spec:
           storageClassName: longhorn
           size: 10Gi
 
-        proxyListenerMode: multiplex
+        proxyListenerMode: separate
+
+        publicAddr:
+          - teleport.kube.it.com:443
+
+        sshPublicAddr:
+          - teleport.kube.it.com:3023
+
+        tunnelPublicAddr:
+          - teleport.kube.it.com:3024
+
+        kubePublicAddr:
+          - teleport.kube.it.com:3026
 
         authentication:
           type: local
