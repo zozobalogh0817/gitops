@@ -19,7 +19,7 @@ spec:
           existingSecretName: teleport-tls
 
         service:
-          type: ClusterIP
+          type: LoadBalancer
 
         persistence:
           enabled: true
